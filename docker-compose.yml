@@ -1,0 +1,15 @@
+version: "3.8"
+
+networks:
+  deltr:
+    external: true
+
+services:
+  whoami:
+    image: traefik/whoami
+    container_name: whoami
+    restart: unless-stopped
+    networks:
+      - deltr
+   # ports:
+     # - "3000:3000"
